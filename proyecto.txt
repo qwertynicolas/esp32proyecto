@@ -22,7 +22,9 @@ las cuales, si se cumple una cierta secuencia de botones, se reproducira
 un archivo de audio, si bien no creo que tengamos salida de audio en las
 computadoras del laboratorio podríamos usar programas tales como cava que permitan visualizar el
 audio de forma gráfica. O tal vez se podría conectar parlantes externos que reproduzcan el audio, aun
-que no estoy del todo seguro que se pueda llevar a cabo.
+que no estoy del todo seguro que se pueda llevar a cabo. Una alternativa, más sencilla, es que la secuencia
+abra un pop-up de una página de YouTube con la canción, sería más sencillo que integrar un archivo de audio
+en el server.
 
 Paso por paso:
 
