@@ -4,7 +4,7 @@ def do_connect():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
-        sta_if.connect('<ssid>', '<key>')
+        sta_if.connect('<ssid>', '<key>') # cambiar estas variables por las que correspondan
         while not sta_if.isconnected():
             pass
     print('network config:', sta_if.ipconfig('addr4'))
