@@ -1,0 +1,41 @@
+Proyecto ESP32
+
+Primero que nada hay que verificar si la computadora tiene todas las dependencias que este
+proyecto necesita, si no mal recuerdo las computadoras en el aula 135 usan Ubuntu o Tiny Core, esperemos
+que usen Ubuntu para que sea más fácil, aunque no estoy seguro si le incorporaron un instalador
+de paquetes a Tiny Core.
+
+dependencias en ubuntu:
+
+python3 ('python3 --version' para verificar que este)
+esptool ampy (se instalan usando 'pip3 install esptool ampy' o en un entorno virtual)
+thonny (creo que ya está)
+
+calculo que los drivers necesarios para el usb ya están instalados..
+
+Si estamos en Tiny Core y sin un gestor de paquetes que nos ayude a instalar las dependecias las
+tendremos que armar desde source lo cual es bastante molesto, de nuevo, esperemos que estén en Ubuntu
+
+La idea general del proyecto es armar un servidor web simple (primero conectar al wi-fi al ESP32) que
+pueda recibir solicitudes HTTP hechas por las pins del ESP32 (no estoy seguro de esto la verdad)
+las cuales, si se cumple una cierta secuencia de botones, se reproducira
+un archivo de audio, si bien no creo que tengamos salida de audio en las
+computadoras del laboratorio podríamos usar programas tales como cava que permitan visualizar el
+audio de forma gráfica. O tal vez se podría conectar parlantes externos que reproduzcan el audio, aun
+que no estoy del todo seguro que se pueda llevar a cabo.
+
+Paso por paso:
+
+1) Conectar el ESP32 al wi-fi mediante wifi.py
+1.1) Conectar primero el ESP32 (obviamente) al usb y luego abrir el IDE (Thonny)
+1.2) Pegar wifi.py en la IDE y guardarlo en la ESP32 (creo, tengo dudas de cómo llevar a cabo esto)
+1.3) Ejecutar el programa y técnicamente (si no falla nada) el ESP32 debería de conectarse al wi-fi
+y además la consola debería de mostrar en plain text la dirección IP la cual se usará para el proyecto.
+Acordarse de cambiar el nombre del programa a main.py
+
+2) Armar el servidor web que pueda recibir las solicitudes HTTP (las secuencias de
+botones) con las cuales el proyecto se llevara a cabo. En el repositorio está como server.py
+2.1) server.py tiene muchas variables que se han de cambiar a la hora de llevar a cabo el proyecto,
+contraseña del wifi, ssid, etc.. (acá no estoy seguro de cómo será, estoy bastante perdido sobre
+lo que es el uso de wifi en el ESP32)
+2.2)
